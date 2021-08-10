@@ -30,6 +30,7 @@ function Form({title,authors,desc,settitle,setauthors,setdesc}) {
         })
         .then(res=>{return res.json()})
         .then(data=>{
+            
             window.location.href = data.redirect
         })
         .catch(err=>console.log(err))

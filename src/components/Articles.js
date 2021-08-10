@@ -1,14 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-function Articles({articles,setarticle}) {
+function Articles({articles,setloading}) {
     
     const senddelete=(e)=>{
-        
+        setloading(true)
         fetch(`https://article1blog.herokuapp.com/article/${e.target.dataset.id}`,{
             method:"DELETE"
         })
         .then((response)=>{return response.json()})
         .then(data=>{
+            setloading(false)
             window.location.href=data.redirect
         })
         .catch((err)=>console.log(err))

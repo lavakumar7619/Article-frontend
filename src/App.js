@@ -2,6 +2,7 @@
 import React,{useState,useEffect}  from 'react';
 import { Route,BrowserRouter as Router,Switch} from 'react-router-dom'
 import './App.css';
+import Load from "./components/loading"
 import Form from './components/Form'
 import Articles from './components/Articles'
 import Nav from './components/Nav'
@@ -12,7 +13,7 @@ function App() {
   const [authors, setauthors] = useState("")
   const [desc, setdesc] = useState("")
   const [articles, setarticles] = useState([])
-
+  const [loading, setloading] = useState(true)
   useEffect(() => {
     fetch("https://article1blog.herokuapp.com/articles",{
       method: 'GET',
@@ -22,7 +23,7 @@ function App() {
     })
     .then(res=>{return res.json()})
     .then(data=>{
-      
+      setloading(false) 
       setarticles(data)
     })
     .catch(err=>console.log(err))
@@ -31,11 +32,12 @@ function App() {
  
   return (
     <div className="App">
+      <Load loading={loading}></Load>
       <Router>
         <Nav/>
         <Switch>
            <Route path="/" exact >
-              {articles.length>0 ? <Articles articles={articles}/>:'No Articles Has been added ....'}
+              {articles.length>0 ? <Articles setloading={setloading} articles={articles}/>:'No Articles Has been added ....'}
            </Route>
           <Route path='/form' >
             <Form 
@@ -44,7 +46,7 @@ function App() {
             />
           </Route>
           <Route path={`/article/:id`}>
-            <Article />
+            <Article setloading={setloading}></Article>
           </Route>
           <Route  path={`/edit/:id`}>
             <Edit />

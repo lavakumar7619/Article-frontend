@@ -92,7 +92,10 @@ form button{
     justify-content:space-around;
 }
 
-
+.load{
+    display:flex;
+    justify-content:centre;
+}
 
 
 
