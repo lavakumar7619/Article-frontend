@@ -14,7 +14,7 @@ function App() {
   const [articles, setarticles] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:5000/articles",{
+    fetch("https://article1blog.herokuapp.com/articles",{
       method: 'GET',
       headers: {
           'Content-type': 'application/json'
