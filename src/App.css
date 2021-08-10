@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding:0
+}
+body{
+    text-transform:captialize;
+    background-color:#F3F3F3;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+.nav-bar{
+    display:flex;
+    justify-content:space-between;
+    background-color:brown;
+    color:white;
+    padding:5px;
+}
+.links{
+    display:flex;
+}
+li{
+    list-style:none;
+    margin-right:5px;
+    border:1px solid black;
+    padding:2px 8px;
+    background-color:white;
+    border-radius:25px;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+ h2{
+    color: black;
+    text-align: center;
+    background-color: burlywood
+}
+form{
+    background-color: antiquewhite;
+    padding: 8PX;
+}
+form .text-area{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+form input,form textarea{
+    padding: 5px;
+}
+form button{
+    cursor: pointer;
+    padding: 5px;
+}
+.article{
+    background-color: aqua;
+    margin: 5px;
+    padding: 5px;
+    border:1px solid black;
+    border-radius: 10px;
+}
+.article h4,p{
+    margin-top: 2px;
+    font-size: 25px;
+}
+.article button{
+    margin-top: 2px;
+    padding: 2px;
+    margin-right: 5px;
+}
+.delete{
+    cursor: pointer;
+}
+.delete:hover{
+    background-color: red;
+    color: honeydew;
+}
+.article .x{
+    background-color: antiquewhite;
+    margin: 2px;
+    font-family: cursive;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.description{
+    background-color: aqua;
+    margin: 5px;
+}
+.edit .buttons{
+    display:flex;
+    justify-content:space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
